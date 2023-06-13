@@ -1,0 +1,72 @@
+.trainCard {
+  display: grid;
+  align-items: center;
+  column-gap: 8px;
+  grid-template-columns: repeat(24, 1fr);
+  padding: 10px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid black;
+  }
+
+  &__name {
+    grid-column: 1 / 3;
+    color: yellowgreen;
+  }
+
+  &__city {
+    grid-column: 3 / 8;
+  }
+
+  &__departureTime {
+    grid-column: 8 / 12;
+  }
+
+  &__arrivalTime {
+    grid-column: 12 / 16;
+  }
+
+  &__status {
+    grid-column: 16 / 18;
+    color: yellowgreen;
+
+    &-danger {
+      color: red;
+    }
+  }
+
+  &__price {
+    grid-column: 19 / 21;
+  }
+
+  &__places {
+    grid-column: 21 / 23;
+  }
+
+  &__buttons {
+    grid-column: 23 / 25;
+  }
+
+  &__button-close {
+    margin-right: 6px;
+    padding: 6px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: gray;
+    }
+  }
+
+  &__button-edit {
+    padding: 2px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: gray;
+    }
+  }
+
+  &__inputLabel {
+    display: block;
+  }
+}

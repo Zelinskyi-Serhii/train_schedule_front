@@ -1,0 +1,45 @@
+.listHeader {
+  position: sticky;
+  top: 0;
+  display: grid;
+  column-gap: 4px;
+  grid-template-columns: repeat(24, 1fr);
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 1px solid black;
+  background-color: white;
+  z-index: 1;
+
+  &__name {
+    grid-column: 1 / 3;
+  }
+
+  &__city {
+    grid-column: 3 / 8;
+  }
+
+  &__departureTime {
+    grid-column: 8 / 12;
+  }
+
+  &__arrivalTime {
+    grid-column: 12 / 16;
+  }
+
+  &__status {
+    grid-column: 16 / 18;
+  }
+
+  &__price {
+    grid-column: 19 / 21;
+  }
+
+  &__places {
+    grid-column: 21 / 23;
+  }
+
+  &__button {
+    grid-column: 23 / 25;
+  }
+}

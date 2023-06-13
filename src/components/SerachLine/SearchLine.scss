@@ -1,0 +1,14 @@
+.search {
+  position: relative;
+
+  &__input {
+    padding: 4px 24px 4px 4px;
+    border-radius: 4px;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 6px;
+    top: 10px;
+  }
+}

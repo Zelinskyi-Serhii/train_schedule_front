@@ -1,0 +1,12 @@
+.schedule {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: -1px 15px 91px 0px rgba(255,255,255,1);
+
+  &__title {
+    text-align: center;
+  }
+}
