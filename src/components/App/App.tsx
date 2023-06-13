@@ -15,13 +15,17 @@ export const App = () => {
   const [error, setError] = useState('');
   const [isOpenForm, setIsOpenForm] = useState(false);
   const [query, setQuery] = useState('');
-  const [value] = useDebounce(query, 1000);
+  const [queryDebounce] = useDebounce(query, 1000);
+
+  useEffect(() => {
+    console.log('test');
+  }, [])
 
   const loadTrains = useCallback(async() => {
     setIsLoading(true);
 
     try {
-      const trains = await getAllTrains(value);
+      const trains = await getAllTrains(queryDebounce);
 
       setAllTrains(trains);
     } catch {
@@ -29,7 +33,7 @@ export const App = () => {
     } finally {
       setIsLoading(false)
     }
-  }, [value]);
+  }, [queryDebounce]);
 
   const deleteTrain = async(trainId: number) => {
     setIsLoading(true);
@@ -76,7 +80,7 @@ export const App = () => {
 
   useEffect(() => {
     loadTrains();
-  }, [loadTrains, value]);
+  }, [loadTrains, queryDebounce]);
 
   const isShowTrainList = !isLoading && !error && !isOpenForm;
 
